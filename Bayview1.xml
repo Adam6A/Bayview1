@@ -1,51 +1,48 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_forward" id="1" x="124" y="31">
-    <next>
-      <block type="movement_right" id="2">
-        <next>
-          <block type="movement_forward" id="3">
-            <next>
-              <block type="movement_reverse" id="4">
-                <next>
-                  <block type="movement_right" id="5">
-                    <next>
-                      <block type="movement_left" id="6">
-                        <next>
-                          <block type="movement_forward" id="7">
-                            <next>
-                              <block type="movement_forward" id="8">
-                                <next>
-                                  <block type="movement_reverse" id="9">
-                                    <next>
-                                      <block type="movement_right" id="10">
-                                        <next>
-                                          <block type="movement_left" id="11">
-                                            <next>
-                                              <block type="movement_reverse" id="12">
-                                                <next>
-                                                  <block type="movement_stop" id="13"></block>
-                                                </next>
-                                              </block>
-                                            </next>
-                                          </block>
-                                        </next>
-                                      </block>
-                                    </next>
-                                  </block>
-                                </next>
-                              </block>
-                            </next>
-                          </block>
-                        </next>
-                      </block>
-                    </next>
-                  </block>
-                </next>
+  <block type="controls_whileUntil" id="46" inline="false" x="184" y="131">
+    <field name="MODE">UNTIL</field>
+    <value name="NUMBER">
+      <block type="sensor_button" id="60">
+        <field name="OBJECT">ENTER</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="controls_if" id="221" inline="false">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="246" inline="true">
+            <field name="OP">LT</field>
+            <value name="A">
+              <block type="sensor_object" id="320">
+                <field name="OBJECT">LEFTFRONT</field>
               </block>
-            </next>
+            </value>
+            <value name="B">
+              <block type="math_number" id="358">
+                <field name="NUM">69</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="movement_right" id="369"></block>
+        </statement>
+        <statement name="ELSE">
+          <block type="movement_forward" id="380"></block>
+        </statement>
+        <next>
+          <block type="robot_delay" id="382" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="410">
+                <field name="NUM">200</field>
+              </block>
+            </value>
           </block>
         </next>
       </block>
+    </statement>
+    <next>
+      <block type="movement_stop" id="441"></block>
     </next>
   </block>
 </xml>
