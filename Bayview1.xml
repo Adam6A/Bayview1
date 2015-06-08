@@ -60,7 +60,7 @@
       </block>
     </statement>
     <next>
-      <block type="movement_stop" id="192"></block>
+      <block type="movement_stop" id="192" disabled="true"></block>
     </next>
   </block>
   <block type="math_random" id="214" x="-392" y="772"></block>
