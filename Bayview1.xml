@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="1" inline="false" disabled="true" x="66" y="-385">
+  <block type="controls_whileUntil" id="1" inline="false" x="-183" y="-350">
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
       <block type="sensor_button" id="2">
@@ -60,8 +60,7 @@
       </block>
     </statement>
     <next>
-      <block type="movement_stop" id="192" disabled="true"></block>
+      <block type="movement_stop" id="192"></block>
     </next>
   </block>
-  <block type="math_random" id="214" x="-392" y="772"></block>
 </xml>
