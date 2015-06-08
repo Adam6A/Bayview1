@@ -1,5 +1,73 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_forward" id="150" x="-35" y="-29">
+  <block type="controls_whileUntil" id="452" inline="false" x="-25" y="-148">
+    <field name="MODE">UNTIL</field>
+    <value name="NUMBER">
+      <block type="sensor_button" id="484">
+        <field name="OBJECT">ENTER</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="oled_cleardisplay" id="493">
+        <next>
+          <block type="oled_setcursor" id="502" inline="true">
+            <value name="STARTX">
+              <block type="math_number" id="524">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <value name="STARTY">
+              <block type="math_number" id="525">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <next>
+              <block type="oled_drawnumber" id="534" inline="true">
+                <value name="NUMBER">
+                  <block type="sensor_object" id="575">
+                    <field name="OBJECT">LEFTFRONT</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_if" id="341" inline="false">
+                    <value name="IF0">
+                      <block type="logic_compare" id="374" inline="true">
+                        <field name="OP">LT</field>
+                        <value name="A">
+                          <block type="sensor_object" id="382">
+                            <field name="OBJECT">LEFTFRONT</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="430">
+                            <field name="NUM">70</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="movement_forward" id="150">
+                        <next>
+                          <block type="robot_delay" id="250" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="299">
+                                <field name="NUM">1000</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="movement_stop" id="319"></block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
     <next>
       <block type="controls_whileUntil" id="1" inline="false">
         <field name="MODE">UNTIL</field>
@@ -67,5 +135,6 @@
       </block>
     </next>
   </block>
-  <block type="math_random" id="214" x="-5" y="447"></block>
+  <block type="movement_stop" id="469" x="-103" y="31"></block>
+  <block type="math_random" id="214" x="-392" y="772"></block>
 </xml>
