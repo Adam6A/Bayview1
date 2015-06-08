@@ -1,5 +1,4 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="robot_delay" id="22" inline="true" x="-357" y="-76"></block>
   <block type="movement_forward" id="150" x="-35" y="-29">
     <next>
       <block type="controls_whileUntil" id="1" inline="false">
