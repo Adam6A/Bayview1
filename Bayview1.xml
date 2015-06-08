@@ -57,12 +57,16 @@
               <block type="movement_forward" id="12"></block>
             </statement>
             <next>
-              <block type="robot_delay" id="13" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="14">
-                    <field name="NUM">200</field>
+              <block type="expansion_gripper" id="201" inline="true">
+                <next>
+                  <block type="robot_delay" id="13" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="14">
+                        <field name="NUM">200</field>
+                      </block>
+                    </value>
                   </block>
-                </value>
+                </next>
               </block>
             </next>
           </block>
