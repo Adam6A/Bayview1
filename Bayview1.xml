@@ -36,7 +36,7 @@
               </block>
             </value>
             <value name="B">
-              <block type="math_number" id="164">
+              <block type="math_number" id="10">
                 <field name="NUM">21</field>
               </block>
             </value>
@@ -60,7 +60,7 @@
       </block>
     </statement>
     <next>
-      <block type="movement_stop" id="192"></block>
+      <block type="movement_stop" id="15"></block>
     </next>
   </block>
 </xml>
